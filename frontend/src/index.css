@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .light {
+    @apply bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 text-gray-900;
+  }
+  .dark {
+    @apply bg-gradient-to-br from-gray-900 via-slate-900 to-black text-white;
+  }
+  body {
+    font-family: 'Outfit', sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-gradient-to-r from-violet-600 via-purple-600 to-indigo-600 text-white px-8 py-4 rounded-2xl font-semibold hover:from-violet-700 hover:via-purple-700 hover:to-indigo-700 transition-all duration-500 shadow-2xl hover:shadow-violet-500/25 transform hover:scale-105;
+  }
+  
+  .btn-secondary {
+    @apply bg-white/10 backdrop-blur-xl text-gray-300 px-8 py-4 rounded-2xl border border-gray-700/50 hover:bg-white/20 transition-all duration-300 font-medium;
+  }
+  
+  .btn-secondary-light {
+    @apply bg-white/80 backdrop-blur-xl text-gray-700 px-8 py-4 rounded-2xl border border-gray-300/50 hover:bg-white transition-all duration-300 font-medium shadow-lg;
+  }
+  
+  .card {
+    @apply bg-white/5 backdrop-blur-2xl rounded-3xl border border-white/10 p-8 shadow-2xl hover:shadow-violet-500/10 transition-all duration-500;
+  }
+  
+  .card-light {
+    @apply bg-white/70 backdrop-blur-2xl rounded-3xl border border-orange-200/50 p-8 shadow-2xl hover:shadow-orange-500/10 transition-all duration-500;
+  }
+  
+  .glass-nav {
+    @apply bg-black/20 backdrop-blur-2xl border-b border-white/10 shadow-2xl;
+  }
+  
+  .glass-nav-light {
+    @apply bg-white/80 backdrop-blur-2xl border-b border-orange-200/50 shadow-2xl;
+  }
+  
+  .input-field {
+    @apply w-full px-6 py-4 bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl text-white placeholder-gray-400 focus:border-violet-500/50 focus:ring-2 focus:ring-violet-500/20 transition-all duration-300 font-medium;
+  }
+  
+  .input-field-light {
+    @apply w-full px-6 py-4 bg-white/80 backdrop-blur-xl border border-orange-200/50 rounded-2xl text-gray-900 placeholder-gray-500 focus:border-orange-500/50 focus:ring-2 focus:ring-orange-500/20 transition-all duration-300 font-medium;
+  }
+  
+  .logo-gradient {
+    @apply bg-gradient-to-br from-violet-400 via-purple-500 to-indigo-600;
+  }
+  
+  .logo-gradient-light {
+    @apply bg-gradient-to-br from-orange-400 via-red-500 to-pink-600;
+  }
+  
+  .text-gradient {
+    @apply bg-gradient-to-r from-violet-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent;
+  }
+  
+  .text-gradient-light {
+    @apply bg-gradient-to-r from-orange-600 via-red-600 to-pink-600 bg-clip-text text-transparent;
+  }
+  
+  .trip-card {
+    @apply bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 p-6 hover:border-violet-500/30 hover:shadow-2xl hover:shadow-violet-500/10 transition-all duration-500 cursor-pointer;
+  }
+  
+  .trip-card-light {
+    @apply bg-white/70 backdrop-blur-xl rounded-3xl border border-orange-200/50 p-6 hover:border-orange-500/30 hover:shadow-2xl hover:shadow-orange-500/10 transition-all duration-500 cursor-pointer;
+  }
+  
+  .floating-orb {
+    @apply absolute rounded-full blur-3xl opacity-20 animate-pulse;
+  }
+  
+  .theme-toggle {
+    @apply w-12 h-6 bg-gray-700 rounded-full relative cursor-pointer transition-colors duration-300;
+  }
+  
+  .theme-toggle.light {
+    @apply bg-orange-300;
+  }
+  
+  .theme-toggle-slider {
+    @apply w-5 h-5 bg-white rounded-full absolute top-0.5 left-0.5 transition-transform duration-300 shadow-lg;
+  }
+  
+  .theme-toggle.light .theme-toggle-slider {
+    @apply transform translate-x-6;
+  }
+}
